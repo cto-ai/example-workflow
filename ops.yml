@@ -1,27 +1,7 @@
 version: "1"
-ops:
-  - name: unnecessary_op
-    description: this is a dummy op in the ops.yml meant to ensure the CLI is prompting for choices
-    public: false
-    sourceCodeURL: ""
-    run: node /ops/index.js
-    env:
-      - 'USER=world'
-      - 'OPS_ACCESS_TOKEN'
-    src:
-      - Dockerfile
-      - index.js
-      - package.json
-      - .dockerignore
-    mountCwd: true
-    mountHome: false
-    bind:
-      - /tmp:/tmp
-    port:
-      - 3000:3000
 workflows:
-  - name: echo_message_workflow
-    description: sample workflow that echoes a message
+  - name: example-workflow
+    description: example workflow that echoes a message to the terminal
     remote: false
     public: false
     sourceCodeURL: ""
